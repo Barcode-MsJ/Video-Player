@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="userCoverAnchorPane" prefHeight="58.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videoplayergraphic.UserCover">
+   <children>
+      <Circle fx:id="userProfile" fill="DODGERBLUE" layoutX="40.0" layoutY="29.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="UserAccountName" layoutX="77.0" layoutY="12.0" prefHeight="33.0" prefWidth="143.0" text="Account Name" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="12.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

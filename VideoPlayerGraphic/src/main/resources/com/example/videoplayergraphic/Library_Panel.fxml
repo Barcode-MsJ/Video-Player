@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videoplayergraphic.LibraryPanel">
+   <children>
+      <AnchorPane layoutX="138.0" layoutY="72.0" prefHeight="608.0" prefWidth="768.0" style="-fx-background-color: #E62117; -fx-background-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="79.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="489.0" prefWidth="623.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <TabPane layoutX="2.0" layoutY="-3.0" prefHeight="587.0" prefWidth="742.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Playlist Information">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane fitToWidth="true" prefHeight="551.0" prefWidth="740.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <VBox fx:id="playliseVbox" prefHeight="556.0" prefWidth="731.0" spacing="15.0">
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Settings">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="makePlaylistButten" layoutX="98.0" layoutY="61.0" mnemonicParsing="false" onAction="#makePlaylistButtenClicked" text="Make New Playlist" AnchorPane.leftAnchor="150.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addContentPlaylistButten" layoutX="481.0" layoutY="61.0" mnemonicParsing="false" onAction="#addContentPlaylistButtenClicked" text="Add Content To Playlist" AnchorPane.rightAnchor="150.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="newPlaylistTextField" layoutX="141.0" layoutY="156.0" promptText="New Playlist Name" />
+                                    <TextField fx:id="playlistNameTextField" layoutX="441.0" layoutY="156.0" promptText="Playlist Name" />
+                                    <TextField fx:id="contentIDTextField" layoutX="441.0" layoutY="202.0" promptText="Content ID" />
+                                    <Button fx:id="registrationNPNButten" layoutX="177.0" layoutY="202.0" mnemonicParsing="false" onAction="#registrationNPNButtenClicked" text="registration" />
+                                    <Button fx:id="registrationPNCButten" layoutX="477.0" layoutY="250.0" mnemonicParsing="false" onAction="#registrationPNCButtenClicked" text="registration" />
+                                    <Button fx:id="createNewChannelButten" layoutX="144.0" layoutY="362.0" mnemonicParsing="false" onAction="#createNewChannelButtenClicked" text="Create New Channel">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="newChannelNameTextField" layoutX="325.0" layoutY="364.0" promptText="New Channel Name" />
+                                    <TextField fx:id="newChannelDescriptionTextField" layoutX="522.0" layoutY="364.0" promptText="New Channel Description" />
+                                    <TextField fx:id="newChannelCoverTextField" layoutX="427.0" layoutY="409.0" promptText="New Channel Cover" />
+                                    <Button fx:id="registrationCNCButten" layoutX="623.0" layoutY="419.0" mnemonicParsing="false" onAction="#registrationCNCButtenClicked" text="registration" />
+                                    <Button layoutX="159.0" layoutY="449.0" mnemonicParsing="false" onAction="#followChannelButtenClicked" text="Follow Channel">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="followChannelNameTextField" layoutX="298.0" layoutY="451.0" promptText="Channel name" />
+                                    <Button fx:id="registrationFCButten" layoutX="475.0" layoutY="449.0" mnemonicParsing="false" onAction="#registrationFCButtenClicked" text="registration" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Create Content">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <MenuButton fx:id="contentType" layoutX="36.0" layoutY="44.0" mnemonicParsing="false" text="Content type">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </MenuButton>
+                                    <VBox fx:id="contentInfoVbox" alignment="CENTER" layoutX="94.0" layoutY="103.0" prefHeight="378.0" prefWidth="250.0" spacing="5.0">
+                                       <children>
+                                          <TextField fx:id="contentTitle" prefHeight="26.0" prefWidth="237.0" promptText="Content Title" />
+                                          <TextField fx:id="isExclusive" prefHeight="26.0" prefWidth="237.0" promptText="Is Exclusive" />
+                                          <TextField fx:id="description" prefHeight="26.0" prefWidth="237.0" promptText="Description" />
+                                          <TextField fx:id="duration" prefHeight="26.0" prefWidth="237.0" promptText="Duration" />
+                                          <TextField fx:id="category" prefHeight="26.0" prefWidth="237.0" promptText="Category" />
+                                          <TextField fx:id="contentLink" prefHeight="26.0" prefWidth="237.0" promptText="Content Link" />
+                                          <TextField fx:id="cover" prefHeight="26.0" prefWidth="237.0" promptText="Cover" />
+                                          <TextField fx:id="videoSubtitles" prefHeight="26.0" prefWidth="237.0" promptText="Video Subtitles" />
+                                          <TextField fx:id="shortAudio" prefHeight="26.0" prefWidth="237.0" promptText="Short Audio" />
+                                          <TextField fx:id="videoQuality" prefHeight="26.0" prefWidth="237.0" promptText="Video Quality" />
+                                          <TextField fx:id="videoFormat" prefHeight="26.0" prefWidth="237.0" promptText="Video Format" />
+                                          <TextField fx:id="liveSchedule" prefHeight="26.0" prefWidth="237.0" promptText="Live Schedule" />
+                                          <TextField fx:id="podcastOwner" prefHeight="26.0" prefWidth="237.0" promptText="Podcast Owner" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </padding>
+                                    </VBox>
+                                    <Button fx:id="ctreateButtern" layoutX="459.0" layoutY="252.0" mnemonicParsing="false" onAction="#ctreateButternClicked" text="Ctreate" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutX="0.8" layoutY="79.2" prefHeight="608.0" prefWidth="153.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="763.0" AnchorPane.topAnchor="79.0">
+         <children>
+            <Label fx:id="home" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#HomeClicked" prefHeight="27.0" prefWidth="119.0" text="Home">
+               <font>
+                  <Font name="Lucida Sans Typewriter Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="Subscriptions" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#SubscriptionsClicked" prefHeight="27.0" prefWidth="119.0" text="Subscriptions">
+               <font>
+                  <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Channel" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#ChannelClicked" prefHeight="27.0" prefWidth="119.0" text="Channel">
+               <font>
+                  <Font name="Lucida Sans Typewriter Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="userProfilelabel" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#userProfileCliked" prefHeight="27.0" prefWidth="119.0" text="User Profile">
+               <font>
+                  <Font name="Lucida Sans Typewriter Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: #E62117; -fx-background-radius: 5;" text="Library">
+               <font>
+                  <Font name="Lucida Sans Typewriter Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="15.0" />
+         </padding>
+      </VBox>
+      <AnchorPane layoutX="8.0" layoutY="10.0" prefHeight="58.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Circle fx:id="userProfile" fill="DODGERBLUE" layoutX="40.0" layoutY="29.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="UserAccountName" layoutX="77.0" layoutY="12.0" prefHeight="33.0" prefWidth="143.0" text="Account Name" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="12.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

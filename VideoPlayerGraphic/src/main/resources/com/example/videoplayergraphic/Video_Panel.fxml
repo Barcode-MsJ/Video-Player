@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videoplayergraphic.VideoPanel">
+   <children>
+      <AnchorPane layoutX="22.0" layoutY="25.0" prefHeight="455.0" prefWidth="734.0" style="-fx-background-color: #E62117; -fx-background-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <VBox alignment="CENTER" layoutY="-1.0" prefHeight="477.0" prefWidth="750.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <StackPane prefHeight="200.0" prefWidth="750.0">
+                     <children>
+                        <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="750.0" />
+                     </children>
+                  </StackPane>
+                  <HBox alignment="CENTER" prefHeight="33.0" prefWidth="719.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="playButten" mnemonicParsing="false" onAction="#playButtenClicked" text="play  ▶">
+                           <font>
+                              <Font name="Consolas Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="pauseButten" mnemonicParsing="false" onAction="#pauseButtenClicked" text="pause ⏸">
+                           <font>
+                              <Font name="Consolas Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="stopButten" mnemonicParsing="false" onAction="#stopButtenClicked" text="stop ⏹">
+                           <font>
+                              <Font name="Consolas Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Slider fx:id="videoSlider" prefHeight="14.0" prefWidth="369.0" />
+                        <Label fx:id="videoTime" prefHeight="18.0" prefWidth="96.0" text="00:00/00:00" />
+                        <Label text="📢">
+                           <HBox.margin>
+                              <Insets right="-13.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Slider fx:id="soundSlider" prefHeight="14.0" prefWidth="94.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="64.0" prefWidth="800.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="94.0" text="Description :">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="description" prefHeight="26.0" prefWidth="536.0" style="-fx-background-color: cccccc; -fx-background-radius: 3;" text="Description . . ." />
+                        <Label fx:id="likes" style="-fx-background-color: #E62117; -fx-background-radius: 3; -fx-text-fill: #FFFFFF;" text="Likes : 56" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="views" style="-fx-background-color: #E62117; -fx-background-radius: 3; -fx-text-fill: #FFFFFF;" text="View : 56" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="800.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="comment" prefHeight="30.0" prefWidth="410.0" promptText="Comment . . ." />
+                        <Button fx:id="sendButten" mnemonicParsing="false" onAction="#sendButtenClicked" text="send">
+                           <font>
+                              <Font name="Consolas Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="likeButten" mnemonicParsing="false" onAction="#likeButtenClicked" text="Like👍">
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="reportButten" mnemonicParsing="false" onAction="#reportButtenClicked" text="Report" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

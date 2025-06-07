@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videoplayergraphic.Subscription">
+   <children>
+      <AnchorPane layoutX="138.0" layoutY="72.0" prefHeight="608.0" prefWidth="768.0" style="-fx-background-color: #E62117; -fx-background-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="79.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="489.0" prefWidth="623.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <ScrollPane layoutX="34.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <VBox fx:id="channelsVbox" alignment="TOP_CENTER" prefHeight="562.0" prefWidth="230.0" spacing="15.0" />
+                     </content>
+                     <padding>
+                        <Insets left="50.0" top="20.0" />
+                     </padding>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutX="0.8" layoutY="79.2" prefHeight="608.0" prefWidth="153.0" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="763.0" AnchorPane.topAnchor="79.0">
+         <children>
+            <Label fx:id="home" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#HomeClicked" prefHeight="27.0" prefWidth="119.0" text="Home">
+               <font>
+                  <Font name="Lucida Sans Typewriter Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: #E62117; -fx-background-radius: 5;" text="Subscriptions">
+               <font>
+                  <Font name="Lucida Sans Typewriter Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Channel" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#ChannelClicked" prefHeight="27.0" prefWidth="119.0" text="Channel">
+               <font>
+                  <Font name="Lucida Sans Typewriter Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="UserProfile" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#userProfileClicked" prefHeight="27.0" prefWidth="119.0" text="User Profile">
+               <font>
+                  <Font name="Lucida Sans Typewriter Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="Library" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#libraryClicked" prefHeight="27.0" prefWidth="119.0" text="Library">
+               <font>
+                  <Font name="Lucida Sans Typewriter Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="15.0" />
+         </padding>
+      </VBox>
+      <AnchorPane layoutX="8.0" layoutY="10.0" prefHeight="58.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Circle fx:id="userProfile" fill="DODGERBLUE" layoutX="40.0" layoutY="29.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="UserAccountName" layoutX="77.0" layoutY="12.0" prefHeight="33.0" prefWidth="143.0" text="Account Name" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="12.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
